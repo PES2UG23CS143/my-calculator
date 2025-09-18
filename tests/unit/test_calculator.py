@@ -56,3 +56,22 @@ class TestMultiplyDivide:
     def test_divide_negative_numbers(self):
         assert divide(-10, 2) == -5
         assert divide(-12, -3) == 4
+from src.calculator import add, subtract, multiply, divide, power, square_root
+
+class TestAdvancedOperations:
+    def test_power_positive_numbers(self):
+        assert power(2, 3) == 8
+        assert power(5, 2) == 25
+
+    def test_power_zero_exponent(self):
+        assert power(5, 0) == 1
+        assert power(0, 0) == 1
+
+    def test_square_root_positive_numbers(self):
+        assert square_root(4) == 2
+        assert square_root(9) == 3
+
+    def test_square_root_negative_raises_error(self):
+        import pytest
+        with pytest.raises(ValueError, match="Cannot calculate square root of negative number"):
+            square_root(-4)
