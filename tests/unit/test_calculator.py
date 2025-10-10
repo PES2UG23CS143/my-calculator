@@ -3,8 +3,11 @@ Unit Tests for Calculator
 Students start with 2 passing tests, then add more
 """
 
+import sys
+import click
+from src.calculator import add, subtract, multiply, divide, power, square_root
 import pytest
-from src.calculator import add, divide, subtract, multiply
+from src.calculator import add, divide, subtract, multiply, divide, power, square_root
 
 
 class TestBasicOperations:
@@ -37,7 +40,6 @@ class TestMultiplyDivideWithValidation:
             divide("10", 2)
 
 
-# TODO: Students will add TestMultiplyDivide class
 from src.calculator import multiply, divide  # make sure these are imported at the top
 
 
